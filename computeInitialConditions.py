@@ -29,7 +29,7 @@ del state_wise_daily["DD"]
 del state_wise_daily["ML"]
 del state_wise_daily["MZ"]
 del state_wise_daily["NL"]
-
+del state_wise_daily['UN']
 # Rename column TT as Total
 state_wise_daily.rename(columns={"TT" : "Total"}, inplace=True)
 
@@ -71,7 +71,7 @@ initial_conditions_df["State"] = columns_list
 initial_conditions_df["Initial"] = initial_conditions_list
 
 # Write initial conditions DataFrame to csv file
-initial_conditions_df.to_csv(date + '-initial.csv', index=False)
+initial_conditions_df.to_csv(date + '-initial.data', sep=' ', index=False)
 
-print("\nData written into " + date + '-initial.csv\n')
+print("\nData written into " + date + '-initial.data\n')
 
